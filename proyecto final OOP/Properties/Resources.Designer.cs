@@ -173,6 +173,26 @@ namespace proyecto_final_OOP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bit {
+            get {
+                object obj = ResourceManager.GetObject("Bit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BossRK {
+            get {
+                object obj = ResourceManager.GetObject("BossRK", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GIF_from_GIFER {
             get {
                 object obj = ResourceManager.GetObject("GIF from GIFER", resourceCulture);
@@ -186,6 +206,66 @@ namespace proyecto_final_OOP.Properties {
         internal static System.Drawing.Bitmap girada {
             get {
                 object obj = ResourceManager.GetObject("girada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Limon {
+            get {
+                object obj = ResourceManager.GetObject("Limon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nmy1RK {
+            get {
+                object obj = ResourceManager.GetObject("nmy1RK", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nmy2RK {
+            get {
+                object obj = ResourceManager.GetObject("nmy2RK", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nmy3RK {
+            get {
+                object obj = ResourceManager.GetObject("nmy3RK", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nmy4RK {
+            get {
+                object obj = ResourceManager.GetObject("nmy4RK", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RockRK {
+            get {
+                object obj = ResourceManager.GetObject("RockRK", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

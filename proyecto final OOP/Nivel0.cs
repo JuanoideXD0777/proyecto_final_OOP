@@ -54,6 +54,13 @@ namespace proyecto_final_OOP
                 Game_Time.Stop();
                 Lvl_2.Show();
             }
+            if (Nivel_3.Bounds.IntersectsWith(MU.Bounds) && enter)
+            {
+                Rockmaruga Lvl3 = new Rockmaruga();
+                this.Hide();
+                Game_Time.Stop();
+                Lvl3.Show();
+            }
             
         }
 

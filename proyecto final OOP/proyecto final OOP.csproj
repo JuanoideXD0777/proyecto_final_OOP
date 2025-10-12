@@ -89,6 +89,12 @@
     <Compile Include="Puzzle_D.Designer.cs">
       <DependentUpon>Puzzle_D.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rockmaruga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rockmaruga.Designer.cs">
+      <DependentUpon>Rockmaruga.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Init.resx">
       <DependentUpon>Init.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Puzzle_D.resx">
       <DependentUpon>Puzzle_D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rockmaruga.resx">
+      <DependentUpon>Rockmaruga.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -194,6 +203,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\girada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Limon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BossRK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nmy4RK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nmy3RK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nmy2RK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nmy1RK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RockRK.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
