@@ -61,7 +61,27 @@ namespace proyecto_final_OOP
                 Game_Time.Stop();
                 Lvl3.Show();
             }
-            
+            if (Nivel_4.Bounds.IntersectsWith(MU.Bounds) && enter)
+            {
+                Coin_Collector Lvl4 = new Coin_Collector();
+                this.Hide();
+                Game_Time.Stop();
+                Lvl4.Show();
+            }
+            if (Nivel_5.Bounds.IntersectsWith(MU.Bounds) && enter)
+            {
+                MegaRun Lvl5 = new MegaRun();
+                this.Hide();
+                Game_Time.Stop();
+                Lvl5.Show();
+            }
+            if (Nivel_6.Bounds.IntersectsWith(MU.Bounds) && enter)
+            {
+                plataformas classic = new plataformas();
+                this.Hide();
+                Game_Time.Stop();
+                classic.Show();
+            }
         }
 
         private void Abajo(object sender, KeyEventArgs e)

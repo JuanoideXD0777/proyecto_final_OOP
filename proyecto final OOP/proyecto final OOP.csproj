@@ -52,6 +52,12 @@
     <Compile Include="Acerca_De.Designer.cs">
       <DependentUpon>Acerca_De.cs</DependentUpon>
     </Compile>
+    <Compile Include="Coin_Collector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coin_Collector.Designer.cs">
+      <DependentUpon>Coin_Collector.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConfigP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,13 @@
     <Compile Include="Init.Designer.cs">
       <DependentUpon>Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterFs\IG_Over.cs" />
+    <Compile Include="MegaRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MegaRun.Designer.cs">
+      <DependentUpon>MegaRun.cs</DependentUpon>
+    </Compile>
     <Compile Include="Memorama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +88,14 @@
     </Compile>
     <Compile Include="Nivel0.Designer.cs">
       <DependentUpon>Nivel0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objeks\ghostnaviCC.cs" />
+    <Compile Include="Objeks\Limon.cs" />
+    <Compile Include="plataformas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plataformas.Designer.cs">
+      <DependentUpon>plataformas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,14 +116,29 @@
     <Compile Include="Rockmaruga.Designer.cs">
       <DependentUpon>Rockmaruga.cs</DependentUpon>
     </Compile>
+    <Compile Include="sala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sala.Designer.cs">
+      <DependentUpon>sala.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Coin_Collector.resx">
+      <DependentUpon>Coin_Collector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Init.resx">
       <DependentUpon>Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MegaRun.resx">
+      <DependentUpon>MegaRun.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Memorama.resx">
       <DependentUpon>Memorama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nivel0.resx">
       <DependentUpon>Nivel0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plataformas.resx">
+      <DependentUpon>plataformas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rockmaruga.resx">
       <DependentUpon>Rockmaruga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sala.resx">
+      <DependentUpon>sala.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -131,10 +170,7 @@
   <ItemGroup>
     <None Include="Resources\GIF from GIFER.gif" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="InterFs\" />
-    <Folder Include="Objeks\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Nintendo Switch - Mega Man Battle Network Legacy Collection - Gallery - Battle Chips %28BN1%29_r1_c3_processed_by_imagy.png" />
   </ItemGroup>
