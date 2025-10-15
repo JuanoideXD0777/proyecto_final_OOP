@@ -51,31 +51,33 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(342, 119);
+            this.button1.Location = new System.Drawing.Point(332, 158);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(125, 34);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Comenzar juego";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(342, 233);
+            this.button2.Location = new System.Drawing.Point(332, 295);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(125, 34);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button1";
+            this.button2.Text = "configuraciones";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(342, 176);
+            this.button3.Location = new System.Drawing.Point(332, 228);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(125, 34);
             this.button3.TabIndex = 1;
-            this.button3.Text = "button1";
+            this.button3.Text = "puntajes";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox1
             // 
@@ -101,6 +103,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Init";
             this.Text = "Megamanco";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.close);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

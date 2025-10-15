@@ -82,6 +82,13 @@ namespace proyecto_final_OOP
                 Game_Time.Stop();
                 classic.Show();
             }
+            if (ecsit.Bounds.IntersectsWith(MU.Bounds) && enter)
+            {
+                Init inicio = new Init();
+                this.Hide();
+                Game_Time.Stop();
+                inicio.Show();
+            }
         }
 
         private void Abajo(object sender, KeyEventArgs e)

@@ -12,12 +12,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace proyecto_final_OOP
 {
-    public partial class MegaRun : Form, IG_Over
+    public partial class MegaRun : Form, IG_Over, Ireturn
     {
+        public static MegaRun instance;
         bool salto = false;
         int impulso = 12;
         int fuerza = 12;
-        int score = 0;
+        public int score = 0;
         int nmySpd = 10;
         Random RNG = new Random();
         bool disparo = false;
@@ -29,6 +30,7 @@ namespace proyecto_final_OOP
         {
             InitializeComponent();
             reset();
+            instance = this;
         }
 
         private void Tiempo_Tick(object sender, EventArgs e)
@@ -132,19 +134,7 @@ namespace proyecto_final_OOP
                 if (boss_hp == 0)
                 {
                     Tiempo.Stop();
-                    DialogResult vol = MessageBox.Show("¡Felicidades!\n¿Quieres pasar al siguente nivel?", "S:/T/A/G/E/ C.L.E.A.R.", MessageBoxButtons.YesNo);
-                    if (vol == DialogResult.Yes)
-                    {
-
-                        Nivel0 start = new Nivel0();
-                        this.Hide();
-                        start.Show();
-                    }
-                    else if (vol == DialogResult.No)
-                    {
-                        Tiempo.Start();
-                        score = 17;
-                    }
+                    win();
                 }
                 
             }
@@ -178,6 +168,7 @@ namespace proyecto_final_OOP
         {
             Menu.Enabled = false;
             Menu.Visible = false;
+            exit.Visible = false;
             fuerza = 12;
             impulso = 0;
             salto = false;
@@ -212,6 +203,7 @@ namespace proyecto_final_OOP
             G_Over = true;
             Menu.Visible = true;
             Menu.Enabled = true;
+            exit.Visible = true;
             titulo.Text = str;
             Start.Visible = true;
             Start.Text = "Reintentar";
@@ -250,6 +242,35 @@ namespace proyecto_final_OOP
         void IG_Over.Game_Over(string str)
         {
             Game_Over(str);
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            back();
+        }
+
+        public void back()
+        {
+            Nivel0 start = new Nivel0();
+            this.Hide();
+            start.Show();
+        }
+
+        public void win()
+        {
+            DialogResult vol = MessageBox.Show("¡Felicidades!\n¿Quieres pasar al siguente nivel?", "S:/T/A/G/E/ C.L.E.A.R.", MessageBoxButtons.YesNo);
+            if (vol == DialogResult.Yes)
+            {
+
+                Nivel0 start = new Nivel0();
+                this.Hide();
+                start.Show();
+            }
+            else if (vol == DialogResult.No)
+            {
+                Tiempo.Start();
+                score = 17;
+            }
         }
     }
 }

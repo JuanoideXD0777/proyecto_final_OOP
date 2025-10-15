@@ -23,5 +23,24 @@ namespace proyecto_final_OOP
             this.Hide();
             start.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Acerca_De ad = new Acerca_De();
+            this.Hide();
+            ad.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ConfigP conf = new ConfigP();
+            this.Hide();
+            conf.Show();
+        }
+
+        private void close(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

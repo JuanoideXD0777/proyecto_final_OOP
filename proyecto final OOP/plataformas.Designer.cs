@@ -72,6 +72,7 @@
             this.instrucciones2 = new System.Windows.Forms.Label();
             this.Instrucciones1 = new System.Windows.Forms.Label();
             this.titulo = new System.Windows.Forms.Label();
+            this.exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -498,6 +499,7 @@
             // 
             // Menu
             // 
+            this.Menu.Controls.Add(this.exit);
             this.Menu.Controls.Add(this.Start);
             this.Menu.Controls.Add(this.instrucciones2);
             this.Menu.Controls.Add(this.Instrucciones1);
@@ -510,7 +512,7 @@
             // 
             // Start
             // 
-            this.Start.Location = new System.Drawing.Point(146, 181);
+            this.Start.Location = new System.Drawing.Point(145, 118);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(103, 68);
             this.Start.TabIndex = 2;
@@ -547,6 +549,16 @@
             this.titulo.Size = new System.Drawing.Size(186, 37);
             this.titulo.TabIndex = 0;
             this.titulo.Text = "Plataformas";
+            // 
+            // exit
+            // 
+            this.exit.Location = new System.Drawing.Point(158, 219);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(75, 23);
+            this.exit.TabIndex = 3;
+            this.exit.Text = "salir";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // plataformas
             // 
@@ -683,5 +695,6 @@
         private System.Windows.Forms.Label instrucciones2;
         private System.Windows.Forms.Label Instrucciones1;
         private System.Windows.Forms.Label titulo;
+        private System.Windows.Forms.Button exit;
     }
 }

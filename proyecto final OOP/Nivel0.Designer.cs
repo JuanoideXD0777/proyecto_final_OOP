@@ -38,6 +38,7 @@
             this.Nivel_4 = new System.Windows.Forms.PictureBox();
             this.MU = new System.Windows.Forms.PictureBox();
             this.Game_Time = new System.Windows.Forms.Timer(this.components);
+            this.ecsit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Final_boss)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nivel_6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nivel_3)).BeginInit();
@@ -46,6 +47,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Nivel_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nivel_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ecsit)).BeginInit();
             this.SuspendLayout();
             // 
             // Final_boss
@@ -126,6 +128,15 @@
             this.Game_Time.Interval = 20;
             this.Game_Time.Tick += new System.EventHandler(this.Ev_Juego);
             // 
+            // ecsit
+            // 
+            this.ecsit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ecsit.Location = new System.Drawing.Point(747, 359);
+            this.ecsit.Name = "ecsit";
+            this.ecsit.Size = new System.Drawing.Size(41, 79);
+            this.ecsit.TabIndex = 0;
+            this.ecsit.TabStop = false;
+            // 
             // Nivel0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -138,6 +149,7 @@
             this.Controls.Add(this.Nivel_4);
             this.Controls.Add(this.Nivel_3);
             this.Controls.Add(this.Nivel_6);
+            this.Controls.Add(this.ecsit);
             this.Controls.Add(this.Final_boss);
             this.Name = "Nivel0";
             this.Text = "Hubworld";
@@ -152,6 +164,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Nivel_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nivel_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ecsit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,5 +180,6 @@
         private System.Windows.Forms.PictureBox Nivel_4;
         private System.Windows.Forms.PictureBox MU;
         private System.Windows.Forms.Timer Game_Time;
+        private System.Windows.Forms.PictureBox ecsit;
     }
 }

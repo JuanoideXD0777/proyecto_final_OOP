@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_final_OOP.InterFs;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,8 +12,9 @@ using System.Windows.Forms;
 
 namespace proyecto_final_OOP
 {
-    public partial class Memorama : Form
+    public partial class Memorama : Form,Ireturn
     {
+        public static Memorama Instance;
         int Grid_Size = 4;
         int Movimiento = 0;
         int Cartas_volteadas = 0;
@@ -22,10 +24,12 @@ namespace proyecto_final_OOP
         PictureBox tmp1;
         PictureBox tmp2;
         int Cartactual = 0;
+        public int score = 10;
         public Memorama()
         {
             InitializeComponent();
             Iniciar_Juego();
+            Instance = this;
         }
         public void Iniciar_Juego()
         {
@@ -104,17 +108,7 @@ namespace proyecto_final_OOP
                         Cartas_volteadas++;
                         if (Cartas_volteadas > 7)
                         {
-                            DialogResult vol = MessageBox.Show("¡Felicidades!\n¿Quieres pasar al siguente nivel?", "S:/T/A/G/E/ C.L.E.A.R.", MessageBoxButtons.YesNo);
-                            if (vol == DialogResult.Yes)
-                            {
-                                Nivel0 start = new Nivel0();
-                                this.Hide();
-                                start.Show();
-                            }
-                            else if (vol == DialogResult.No)
-                            {
-                                Iniciar_Juego();
-                            }
+                            win();
                         }
                         tmp1.Enabled = false ; tmp2.Enabled = false;
                         cs.Clear();
@@ -158,6 +152,33 @@ namespace proyecto_final_OOP
                 timer1.Stop();
             }
 
+        }
+
+        public void back()
+        {
+            Nivel0 start = new Nivel0();
+            this.Hide();
+            start.Show();
+        }
+
+        public void win()
+        {
+            DialogResult vol = MessageBox.Show("¡Nivel Completado!\n¿Volver al selector de nivel?", "Has ganado", MessageBoxButtons.YesNo);
+            if (vol == DialogResult.Yes)
+            {
+                Nivel0 start = new Nivel0();
+                this.Hide();
+                start.Show();
+            }
+            else if (vol == DialogResult.No)
+            {
+                //do something else
+            }
+        }
+
+        private void salir_Click(object sender, EventArgs e)
+        {
+            back();
         }
     }
 }

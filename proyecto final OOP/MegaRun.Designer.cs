@@ -43,6 +43,7 @@
             this.instrucciones2 = new System.Windows.Forms.Label();
             this.Instrucciones1 = new System.Windows.Forms.Label();
             this.titulo = new System.Windows.Forms.Label();
+            this.exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -184,12 +185,24 @@
             this.titulo.TabIndex = 0;
             this.titulo.Text = "Mega-Run";
             // 
+            // exit
+            // 
+            this.exit.Location = new System.Drawing.Point(713, 9);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(75, 23);
+            this.exit.TabIndex = 6;
+            this.exit.Text = "salir";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Visible = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
             // MegaRun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(798, 442);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -232,5 +245,6 @@
         private System.Windows.Forms.Label instrucciones2;
         private System.Windows.Forms.Label Instrucciones1;
         private System.Windows.Forms.Label titulo;
+        private System.Windows.Forms.Button exit;
     }
 }

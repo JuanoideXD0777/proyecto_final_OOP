@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_final_OOP.InterFs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,9 @@ using System.Windows.Forms;
 
 namespace proyecto_final_OOP
 {
-    public partial class Rockmaruga : Form
+    public partial class Rockmaruga : Form, Ireturn, IG_Over,Ipausa
     {
+        public static Rockmaruga instance;
         PictureBox[] bit; //este crea pictureboxes que se usaran como parte del fondo
         int velF = 0; //esto controla su velocidad
         Random RNG;  //de momento solo controla la generacion de los BITS
@@ -29,13 +31,14 @@ namespace proyecto_final_OOP
         int slashSpeed;
 
         int Course;
-        int score;
+        public int score;
         bool pause;
         bool G_Over;
 
         public Rockmaruga()
         {
             InitializeComponent();
+            instance = this;
         }
 
         private void Rockmaruga_Load(object sender, EventArgs e)
@@ -220,6 +223,7 @@ namespace proyecto_final_OOP
                     {
                         Init();
                         label1.Visible = false;
+                        salir.Visible = false;
                         pause = false;
                     }
                     else
@@ -227,6 +231,7 @@ namespace proyecto_final_OOP
                         label1.Location = new Point(this.Width / 2 - 120, 150);
                         label1.Text = "Pausa";
                         label1.Visible = true;
+                        salir.Visible = true;
                         Parar_Todo();
                         pause = true;
                     }
@@ -288,18 +293,7 @@ namespace proyecto_final_OOP
                         }
                         if (Course == 5)
                         {
-                            DialogResult vol = MessageBox.Show("¡Felicidades!\n¿Quieres pasar al siguente nivel?", "S:/T/A/G/E/ C.L.E.A.R.", MessageBoxButtons.YesNo);
-                            if (vol == DialogResult.Yes)
-                            {
-                                Parar_Todo();
-                                Nivel0 start = new Nivel0();
-                                this.Hide();
-                                start.Show();
-                            }
-                            else if (vol == DialogResult.No)
-                            {
-                                Game_Over("NIVEL COMPLETADO");
-                            }
+                            win();
                         }
                     }
                     Netnavi[i].Location = new Point((i + 1) * 50, -100);
@@ -372,6 +366,50 @@ namespace proyecto_final_OOP
             this.Controls.Clear();
             InitializeComponent();
             Rockmaruga_Load(e, e);
+        }
+
+        private void salir_Click(object sender, EventArgs e)
+        {
+            back();
+        }
+
+        public void back()
+        {
+            Parar_Todo();
+            Nivel0 start = new Nivel0();
+            this.Hide();
+            start.Show();
+        }
+
+        public void win()
+        {
+            DialogResult vol = MessageBox.Show("¡Felicidades!\n¿Quieres pasar al siguente nivel?", "S:/T/A/G/E/ C.L.E.A.R.", MessageBoxButtons.YesNo);
+            if (vol == DialogResult.Yes)
+            {
+                Parar_Todo();
+                Nivel0 start = new Nivel0();
+                this.Hide();
+                start.Show();
+            }
+            else if (vol == DialogResult.No)
+            {
+                Game_Over("NIVEL COMPLETADO");
+            }
+        }
+
+        void IG_Over.Game_Over(string str)
+        {
+            Game_Over(str);
+        }
+
+        public void Pausa()
+        {
+            label1.Location = new Point(this.Width / 2 - 120, 150);
+            label1.Text = "Pausa";
+            label1.Visible = true;
+            salir.Visible = true;
+            Parar_Todo();
+            pause = true;
         }
     }
 }

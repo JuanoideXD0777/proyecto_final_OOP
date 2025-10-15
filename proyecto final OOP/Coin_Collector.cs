@@ -15,12 +15,13 @@ namespace proyecto_final_OOP
 {
     public partial class Coin_Collector : Form
     {
+        public static Coin_Collector instance;
         //en este nivel regrese al metodo de movimiento anterior ya que al no utilizar timers, tiene menos delay
         bool Sup, Inf, Izq, Der; //por como esta hecho el mapa, no implementare el movimiento automatico
         List<PictureBox> muros = new List<PictureBox>();
         List<PictureBox> monedas = new List<PictureBox>();
         int vel = 8;
-        int score = 0;
+        public int score = 0;
         bool pause, G_Over;
         bool Limon; //esto lo añadire mas tarde, utilizara la clase Limon la cual sera nuestra segunda clase (creo), ya saben, por el meme de que megaman lanza limones
         ghostnaviCC R, G, B, roze;
@@ -31,6 +32,7 @@ namespace proyecto_final_OOP
         {
             InitializeComponent();
             Setup();
+            instance = this;
         }
 
         private void Coin_Collector_KeyDown(object sender, KeyEventArgs e)
@@ -59,7 +61,7 @@ namespace proyecto_final_OOP
                 }
                 if (e.KeyCode == Keys.Space)
                 {
-                    Limon = true;
+                    //Limon = true;
                 }
             }
         }

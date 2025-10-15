@@ -33,6 +33,7 @@
             this.Inicio = new System.Windows.Forms.Button();
             this.Record = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.salir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Juego
@@ -66,11 +67,22 @@
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.virar);
             // 
+            // salir
+            // 
+            this.salir.Location = new System.Drawing.Point(713, 415);
+            this.salir.Name = "salir";
+            this.salir.Size = new System.Drawing.Size(75, 23);
+            this.salir.TabIndex = 3;
+            this.salir.Text = "salir";
+            this.salir.UseVisualStyleBackColor = true;
+            this.salir.Click += new System.EventHandler(this.salir_Click);
+            // 
             // Memorama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.salir);
             this.Controls.Add(this.Record);
             this.Controls.Add(this.Inicio);
             this.Controls.Add(this.Juego);
@@ -88,5 +100,6 @@
         private System.Windows.Forms.Button Inicio;
         private System.Windows.Forms.Label Record;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button salir;
     }
 }

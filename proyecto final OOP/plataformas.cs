@@ -13,12 +13,13 @@ using System.Windows.Forms;
 
 namespace proyecto_final_OOP
 {
-    public partial class plataformas : Form, IG_Over
+    public partial class plataformas : Form, IG_Over,Ireturn
     {
+        public static plataformas instance;
         bool Izq, Der,pause, G_Over, salto, disparo;
         int impulso;
         int fuerza;
-        int score = 0;
+        public int score = 0;
         int vel = 8;
         int ivel;
         int hvel;
@@ -40,7 +41,7 @@ namespace proyecto_final_OOP
         public plataformas()
         {
             InitializeComponent();
-
+            instance = this;
         }
 
         public void Game_Over(string str)
@@ -319,56 +320,64 @@ namespace proyecto_final_OOP
             GT.Start();
 
         }
-        /*
-        private void mov()
+
+        private void exit_Click(object sender, EventArgs e)
         {
-            if (Izq) //esto controla el movimiento
-            {
-                Rock.Left -= vel;
-            }
-            if (Der)
-            {
-                Rock.Left += vel;
-            }
-            Rock.Top += impulso;
-            if (salto == true && fuerza < 0)
-            {
-                salto = false;
-            }
-            if (salto == true)
-            {
-                impulso = -12;
-                fuerza -= 1;
-            }
-            else
-            {
-                impulso = 12;
-            }
-            if (Rock.Top > 663 && salto == false & score == 0)
-            {
-                fuerza = 12;
-                Rock.Top = 663;
-                impulso = 0;
-            }
-            if (Rock.Top >550 && salto == false & score != 0)
-            {
-                fuerza = 12;
-                Rock.Top = 551;
-                impulso = 0;
-            }
-            rakataka = 15;
-            nmySpd = 2;
-            nmyvel1 = 1;
-            nmyvel2 = nmySpd;
-            nmyvel3 = nmySpd;
-            gordovel = nmySpd;
-            regordovel = nmySpd;
-            morbidovel = nmySpd;
-            gunnervel1 = nmySpd;
-            gunnervel2 = nmySpd;
-            gunnervel3 = nmySpd;
+            Nivel0 start = new Nivel0();
+            this.Hide();
+            start.Show();
         }
-        */
+
+        /*
+private void mov()
+{
+   if (Izq) //esto controla el movimiento
+   {
+       Rock.Left -= vel;
+   }
+   if (Der)
+   {
+       Rock.Left += vel;
+   }
+   Rock.Top += impulso;
+   if (salto == true && fuerza < 0)
+   {
+       salto = false;
+   }
+   if (salto == true)
+   {
+       impulso = -12;
+       fuerza -= 1;
+   }
+   else
+   {
+       impulso = 12;
+   }
+   if (Rock.Top > 663 && salto == false & score == 0)
+   {
+       fuerza = 12;
+       Rock.Top = 663;
+       impulso = 0;
+   }
+   if (Rock.Top >550 && salto == false & score != 0)
+   {
+       fuerza = 12;
+       Rock.Top = 551;
+       impulso = 0;
+   }
+   rakataka = 15;
+   nmySpd = 2;
+   nmyvel1 = 1;
+   nmyvel2 = nmySpd;
+   nmyvel3 = nmySpd;
+   gordovel = nmySpd;
+   regordovel = nmySpd;
+   morbidovel = nmySpd;
+   gunnervel1 = nmySpd;
+   gunnervel2 = nmySpd;
+   gunnervel3 = nmySpd;
+}
+*/
         private void limpiar_pantalla(PictureBox bala)
         {
             this.Controls.Remove(bala);
@@ -406,6 +415,16 @@ namespace proyecto_final_OOP
             balan.Top = Rock.Top + Rock.Height / 8;
             balan.Tag = "bullet";
             this.Controls.Add(balan);
+        }
+
+        public void back()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void win()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_final_OOP.InterFs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,9 @@ using System.Windows.Forms;
 
 namespace proyecto_final_OOP
 {
-    public partial class Puzzle_D : Form
+    public partial class Puzzle_D : Form,Ireturn
     {
+        public static Puzzle_D instance;
         List<PictureBox> pblis = new List<PictureBox>(); //cuando se cargue la imagen, sus datos se guardaran en esta lista
         List<Bitmap> Imagendurisima = new List<Bitmap>();
         List<string> Pos = new List<string>(); //esto nos ayudara para saber cuando ganamos
@@ -23,9 +25,11 @@ namespace proyecto_final_OOP
         string Aun_No;
         Bitmap MbM;
 
+        public int score = 10;
         public Puzzle_D()
         {
             InitializeComponent();
+            instance = this;
         }
 
         private void Puzzle_D_Load(object sender, EventArgs e)
@@ -93,7 +97,7 @@ namespace proyecto_final_OOP
                 }
             }
         }
-        private void Crear_Imagen()
+        private void Crear_Imagen(Bitmap MbM)
         {
             Bitmap tmp_B = new Bitmap(MbM, new Size(390,390));
 
@@ -212,12 +216,29 @@ namespace proyecto_final_OOP
                 //Process.Start(rutapic);
                 MbM = new Bitmap(Pic.FileName);
                 CrearPB();
-                Crear_Imagen();
+                Crear_Imagen(MbM);
             }
             else
             {
                 MessageBox.Show("Error al abrir el archivo");
             }
+        }
+
+        public void back()
+        {
+            Nivel0 start = new Nivel0();
+            this.Hide();
+            start.Show();
+        }
+
+        void Ireturn.win()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void salir_clk(object sender, EventArgs e)
+        {
+            back();
         }
     }
 }

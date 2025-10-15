@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Reintentar = new System.Windows.Forms.Button();
             this.lvl = new System.Windows.Forms.Label();
+            this.salir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Rock)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,12 +132,24 @@
             this.lvl.TabIndex = 4;
             this.lvl.Text = "Course 1";
             // 
+            // salir
+            // 
+            this.salir.Location = new System.Drawing.Point(12, 12);
+            this.salir.Name = "salir";
+            this.salir.Size = new System.Drawing.Size(75, 23);
+            this.salir.TabIndex = 5;
+            this.salir.Text = "salir";
+            this.salir.UseVisualStyleBackColor = true;
+            this.salir.Visible = false;
+            this.salir.Click += new System.EventHandler(this.salir_Click);
+            // 
             // Rockmaruga
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(482, 753);
+            this.Controls.Add(this.salir);
             this.Controls.Add(this.lvl);
             this.Controls.Add(this.Reintentar);
             this.Controls.Add(this.label1);
@@ -167,5 +180,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Reintentar;
         private System.Windows.Forms.Label lvl;
+        private System.Windows.Forms.Button salir;
     }
 }
