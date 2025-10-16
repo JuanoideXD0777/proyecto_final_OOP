@@ -73,6 +73,7 @@
             this.Controls.Add(this.volver);
             this.Controls.Add(this.login);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConfigP";
             this.Text = "ConfigP";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.close);

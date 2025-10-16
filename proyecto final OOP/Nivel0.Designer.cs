@@ -164,6 +164,7 @@
             this.Controls.Add(this.Nivel_6);
             this.Controls.Add(this.ecsit);
             this.Controls.Add(this.Final_boss);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Nivel0";
             this.Text = "Hubworld";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.closed);

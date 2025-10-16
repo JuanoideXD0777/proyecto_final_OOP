@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(plataformas));
             this.lbl_score = new System.Windows.Forms.Label();
             this.GT = new System.Windows.Forms.Timer(this.components);
             this.Menu = new System.Windows.Forms.Panel();
@@ -609,6 +610,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_score);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "plataformas";
             this.Text = "plataformas";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.plataformas_FormClosed);

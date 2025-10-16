@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Memorama));
             this.Juego = new System.Windows.Forms.Panel();
             this.Inicio = new System.Windows.Forms.Button();
             this.Record = new System.Windows.Forms.Label();
@@ -86,6 +87,7 @@
             this.Controls.Add(this.Record);
             this.Controls.Add(this.Inicio);
             this.Controls.Add(this.Juego);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Memorama";
             this.Text = "Memorama";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.close);

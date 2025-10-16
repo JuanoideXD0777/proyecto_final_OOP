@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rockmaruga));
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.Arriba = new System.Windows.Forms.Timer(this.components);
             this.Abajo = new System.Windows.Forms.Timer(this.components);
@@ -154,6 +155,7 @@
             this.Controls.Add(this.Reintentar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Rock);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Rockmaruga";
             this.Text = "Rockmaruga";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Cerrar);

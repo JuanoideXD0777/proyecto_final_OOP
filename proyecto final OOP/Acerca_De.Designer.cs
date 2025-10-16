@@ -87,6 +87,7 @@
             this.Controls.Add(this.Score_GRID);
             this.Controls.Add(this.Score);
             this.Controls.Add(this.Usr);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Acerca_De";
             this.Text = "Acerca_De";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.close);

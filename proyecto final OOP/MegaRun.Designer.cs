@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MegaRun));
             this.label1 = new System.Windows.Forms.Label();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.Bullet_time = new System.Windows.Forms.Timer(this.components);
@@ -212,6 +213,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Rock);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MegaRun";
             this.Text = "MegaRun";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MegaRun_FormClosed);

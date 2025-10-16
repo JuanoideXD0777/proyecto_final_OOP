@@ -131,6 +131,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pregunta);
             this.Controls.Add(this.tablon_imagen);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "final_level";
             this.Text = "final_level";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.xit);
