@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography;
 using System.Text;
@@ -34,15 +35,18 @@ namespace proyecto_final_OOP
         public int score;
         bool pause;
         bool G_Over;
+        SoundPlayer ost;
 
         public Rockmaruga()
         {
+            ost = new SoundPlayer(Properties.Resources.just_communication);
             InitializeComponent();
             instance = this; //este comando sirve para poder sincronizar el puntaje de este nivel con la base de datos
         }
 
         private void Rockmaruga_Load(object sender, EventArgs e)
         {
+            ost.Play();
             //estos son los parametros iniciales del juego
             pause = false;
             G_Over = false;

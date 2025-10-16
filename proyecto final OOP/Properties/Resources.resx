@@ -334,14 +334,59 @@
   <data name="bassEXE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bassEXE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="classic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\classic.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="glorious" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glorious.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="hubworld" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hubworld.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="just_communication" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\just_communication.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="light_armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\light armor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Megabuster" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Megabuster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MegaBuster1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MegaBuster.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MegamanDefeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MegamanDefeat.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MegamanLand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MegamanLand.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="memorama_relax" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\memorama_relax.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MenuSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuSelect.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="MM6_PlantBarrier" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MM6_PlantBarrier.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pacmaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pacmaze.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pac_regreso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pac_regreso.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PauseMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PauseMenu.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="puzzle_relax" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\puzzle_relax.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="runBoyrun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\runBoyrun.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="zero" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zero.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

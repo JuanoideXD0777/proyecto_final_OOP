@@ -89,6 +89,7 @@
             this.Name = "Memorama";
             this.Text = "Memorama";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.close);
+            this.Load += new System.EventHandler(this.Memorama_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

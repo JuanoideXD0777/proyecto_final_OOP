@@ -523,5 +523,50 @@
   <ItemGroup>
     <None Include="Resources\MM6_PlantBarrier.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MegamanDefeat.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MegamanLand.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MegaBuster.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuSelect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseMenu.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glorious.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classic.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\runBoyrun.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacmaze.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pac_regreso.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\just_communication.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hubworld.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puzzle_relax.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memorama_relax.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

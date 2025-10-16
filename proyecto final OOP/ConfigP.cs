@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,14 +15,16 @@ namespace proyecto_final_OOP
     public partial class ConfigP : Form
     {
         int clk = 0;
-        
+        SoundPlayer ost;
         
         public ConfigP()
         {
+            ost = new SoundPlayer(Properties.Resources.hubworld);
             InitializeComponent();
         }
         private void ConfigP_Load(object sender, EventArgs e)
         {
+            ost.Play();
             if (clk == 0) //si no has presionado el boton login
             {
                 label1.Text = "no estas registrado";

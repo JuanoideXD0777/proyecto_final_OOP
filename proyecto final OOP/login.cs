@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,8 +16,10 @@ namespace proyecto_final_OOP
     {
         public static login instance;
         public string username;
+        SoundPlayer player;
         public login()
         {
+            player = new SoundPlayer(Properties.Resources.classic);
             InitializeComponent();
             instance = this;
         }
@@ -58,6 +61,11 @@ namespace proyecto_final_OOP
                     start.Show();
                 }
             }
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+            player.Play();
         }
     }
 }

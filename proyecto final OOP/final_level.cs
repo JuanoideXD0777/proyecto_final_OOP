@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,7 @@ namespace proyecto_final_OOP
     public partial class final_level : Form, IG_Over,Ireturn
     {
         public static final_level instance;
+        SoundPlayer ost;
         public int score = 0;
         int preguntaCorr; //se combina con el tag para elegir la respuesta
         int numP = 1; //sirve para conocer en que pregunta estamos
@@ -21,6 +23,7 @@ namespace proyecto_final_OOP
         int totalP; //es el numero total de preguntas
         public final_level()
         {
+            ost = new SoundPlayer(Properties.Resources.glorious);
             InitializeComponent();
             instance = this;
             preguntar(numP); 
@@ -147,6 +150,11 @@ namespace proyecto_final_OOP
         private void xit(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void final_level_Load(object sender, EventArgs e)
+        {
+            ost.Play();
         }
     }
 }

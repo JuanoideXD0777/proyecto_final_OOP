@@ -76,6 +76,7 @@
             this.Name = "register";
             this.Text = "register";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.closed);
+            this.Load += new System.EventHandler(this.register_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

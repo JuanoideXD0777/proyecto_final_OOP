@@ -612,6 +612,7 @@
             this.Name = "plataformas";
             this.Text = "plataformas";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.plataformas_FormClosed);
+            this.Load += new System.EventHandler(this.plataformas_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dwn);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.up);
             this.Menu.ResumeLayout(false);

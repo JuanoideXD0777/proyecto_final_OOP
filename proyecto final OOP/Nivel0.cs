@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,10 +23,18 @@ namespace proyecto_final_OOP
         int rockw = 34;
         int vel = 8;
         bool enter;
+        private SoundPlayer ost, select;
 
         public Nivel0()
         {
+            ost = new SoundPlayer(Properties.Resources.hubworld);
+            select = new SoundPlayer(Properties.Resources.MegaBuster1);
             InitializeComponent();
+        }
+
+        private void Nivel0_Load(object sender, EventArgs e)
+        {
+            ost.Play();
         }
 
         private void Ev_Juego(object sender, EventArgs e)
@@ -201,6 +210,7 @@ namespace proyecto_final_OOP
             if (e.KeyCode == Keys.Enter)
             {
                 enter = true;
+                select.Play();
             }
         }
 
@@ -229,6 +239,7 @@ namespace proyecto_final_OOP
             if (e.KeyCode == Keys.Enter)
             {
                 enter = false;
+                ost.Play();
             }
         }
 

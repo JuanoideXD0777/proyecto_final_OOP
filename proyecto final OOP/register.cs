@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,8 +15,10 @@ namespace proyecto_final_OOP
 {
     public partial class register : Form
     {
+        SoundPlayer p;
         public register()
         {
+            p = new SoundPlayer(Properties.Resources.classic);
             InitializeComponent();
         }
 
@@ -36,6 +39,11 @@ namespace proyecto_final_OOP
             Init start = new Init();
             this.Hide();
             start.Show();
+        }
+
+        private void register_Load(object sender, EventArgs e)
+        {
+            p.Play();
         }
     }
 }

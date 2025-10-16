@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,9 +28,12 @@ namespace proyecto_final_OOP
         ghostnaviCC R, G, B, roze; //pre genera a los fantasmas
         string apuntando = "R";
         List<ghostnaviCC> P_Navis = new List<ghostnaviCC>();
+        SoundPlayer intro, ost;
 
         public Coin_Collector()
         {
+            ost = new SoundPlayer(Properties.Resources.pacmaze);
+            intro = new SoundPlayer(Properties.Resources.pac_regreso);
             InitializeComponent();
             Setup();
             instance = this;
@@ -119,6 +123,7 @@ namespace proyecto_final_OOP
 
         private void PacTime_Tick(object sender, EventArgs e)
         {
+            
             Mov(); //ejecuta los comandos de movimiento
 
             foreach (PictureBox Muro in muros) //comprueba las colisiones de los muros
@@ -174,10 +179,12 @@ namespace proyecto_final_OOP
             B.imagen.Location = new Point(949, 82);
             roze.imagen.Location = new Point(48, 58);
             PacTime.Start();
+            ost.Play();
         }
 
         private void Setup()
         {
+            intro.Play();
             //primero comprueba el numero de muros y monedas
             foreach (Control x in this.Controls)
             {

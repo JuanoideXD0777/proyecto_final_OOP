@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,8 +26,10 @@ namespace proyecto_final_OOP
         PictureBox tmp2;
         int Cartactual = 0;
         public int score = 10;
+        SoundPlayer ost;
         public Memorama()
         {
+            ost = new SoundPlayer(Properties.Resources.memorama_relax);
             InitializeComponent();
             Iniciar_Juego();
             Instance = this;
@@ -179,6 +182,11 @@ namespace proyecto_final_OOP
         private void salir_Click(object sender, EventArgs e)
         {
             back();
+        }
+
+        private void Memorama_Load(object sender, EventArgs e)
+        {
+            ost.Play();
         }
     }
 }

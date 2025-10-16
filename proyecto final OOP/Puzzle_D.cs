@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,17 +25,18 @@ namespace proyecto_final_OOP
         string win;
         string Aun_No;
         Bitmap MbM;
-
+        SoundPlayer ost;
         public int score = 10;
         public Puzzle_D()
         {
+            ost = new SoundPlayer(Properties.Resources.puzzle_relax);
             InitializeComponent();
             instance = this;
         }
 
         private void Puzzle_D_Load(object sender, EventArgs e)
         {
-            
+            ost.Play();
         }
         //las siguientes funciones seran parte de la clase Sliding_P
         private void CrearPB()

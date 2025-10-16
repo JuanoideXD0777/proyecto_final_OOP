@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Net.NetworkInformation;
 using System.Reflection.Emit;
 using System.Text;
@@ -37,9 +38,10 @@ namespace proyecto_final_OOP
         int gunnervel3;
         PictureBox slash;
         int SlashSP;
-
+        SoundPlayer ost;
         public plataformas()
         {
+            ost = new SoundPlayer(Properties.Resources.classic);
             InitializeComponent();
             instance = this;
         }
@@ -193,6 +195,9 @@ namespace proyecto_final_OOP
                     }
                     if (Rock.Bounds.IntersectsWith(puerta.Bounds))
                     {
+                        GT.Stop();
+                        Rock.Left = 0;
+                        Rock.Top = 0;
                         win();
                     }
                 }
@@ -313,6 +318,7 @@ namespace proyecto_final_OOP
 
         private void Start_Click(object sender, EventArgs e)
         {
+            
             reset();
         }
 
@@ -346,6 +352,11 @@ namespace proyecto_final_OOP
             Nivel0 start = new Nivel0();
             this.Hide();
             start.Show();
+        }
+
+        private void plataformas_Load(object sender, EventArgs e)
+        {
+            ost.Play();
         }
 
         /*

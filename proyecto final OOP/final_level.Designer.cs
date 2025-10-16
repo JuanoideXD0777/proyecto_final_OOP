@@ -134,6 +134,7 @@
             this.Name = "final_level";
             this.Text = "final_level";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.xit);
+            this.Load += new System.EventHandler(this.final_level_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablon_imagen)).EndInit();
             this.ResumeLayout(false);
 

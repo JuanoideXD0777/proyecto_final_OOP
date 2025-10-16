@@ -89,6 +89,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Init
             // 
@@ -104,6 +105,7 @@
             this.Name = "Init";
             this.Text = "Megamanco";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.close);
+            this.Load += new System.EventHandler(this.Init_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

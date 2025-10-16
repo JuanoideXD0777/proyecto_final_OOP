@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,8 +27,10 @@ namespace proyecto_final_OOP
         int boss_hp = 5;
         int Pos;
         bool G_Over;
+        SoundPlayer ost;
         public MegaRun()
         {
+            ost = new SoundPlayer(Properties.Resources.runBoyrun);
             InitializeComponent();
             reset();
             instance = this;
@@ -278,6 +281,11 @@ namespace proyecto_final_OOP
                 Tiempo.Start();
                 score = 17;
             }
+        }
+
+        private void MegaRun_Load(object sender, EventArgs e)
+        {
+            ost.Play();
         }
     }
 }

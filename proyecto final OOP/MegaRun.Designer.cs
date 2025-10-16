@@ -215,6 +215,7 @@
             this.Name = "MegaRun";
             this.Text = "MegaRun";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MegaRun_FormClosed);
+            this.Load += new System.EventHandler(this.MegaRun_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.k_d);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.k_u);
             this.Menu.ResumeLayout(false);

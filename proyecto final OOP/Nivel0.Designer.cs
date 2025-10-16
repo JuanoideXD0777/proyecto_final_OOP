@@ -167,6 +167,7 @@
             this.Name = "Nivel0";
             this.Text = "Hubworld";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.closed);
+            this.Load += new System.EventHandler(this.Nivel0_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Abajo);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Arriba);
             ((System.ComponentModel.ISupportInitialize)(this.MU)).EndInit();
