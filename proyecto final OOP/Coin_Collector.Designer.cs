@@ -138,6 +138,7 @@
             this.Start = new System.Windows.Forms.Button();
             this.Instrucciones = new System.Windows.Forms.Label();
             this.titulo = new System.Windows.Forms.Label();
+            this.Salida = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -1306,6 +1307,7 @@
             // 
             // Menu
             // 
+            this.Menu.Controls.Add(this.Salida);
             this.Menu.Controls.Add(this.Start);
             this.Menu.Controls.Add(this.Instrucciones);
             this.Menu.Controls.Add(this.titulo);
@@ -1343,6 +1345,16 @@
             this.titulo.Size = new System.Drawing.Size(171, 37);
             this.titulo.TabIndex = 0;
             this.titulo.Text = "Mega-man";
+            // 
+            // Salida
+            // 
+            this.Salida.Location = new System.Drawing.Point(161, 274);
+            this.Salida.Name = "Salida";
+            this.Salida.Size = new System.Drawing.Size(75, 23);
+            this.Salida.TabIndex = 3;
+            this.Salida.Text = "salir";
+            this.Salida.UseVisualStyleBackColor = true;
+            this.Salida.Click += new System.EventHandler(this.Salida_Click);
             // 
             // Coin_Collector
             // 
@@ -1683,5 +1695,6 @@
         private System.Windows.Forms.Label titulo;
         private System.Windows.Forms.Label Instrucciones;
         private System.Windows.Forms.Button Start;
+        private System.Windows.Forms.Button Salida;
     }
 }

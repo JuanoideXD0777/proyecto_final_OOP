@@ -208,6 +208,14 @@ namespace proyecto_final_OOP
             P_Navis.Add(roze);
         }
 
+        private void Salida_Click(object sender, EventArgs e)
+        {
+            PacTime.Stop();
+            Nivel0 start = new Nivel0();
+            this.Hide();
+            start.Show();
+        }
+
         private void Mov()
         {
             if (Izq) //esto controla el movimiento
