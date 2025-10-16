@@ -135,9 +135,9 @@
             this.pictureBox100 = new System.Windows.Forms.PictureBox();
             this.PacTime = new System.Windows.Forms.Timer(this.components);
             this.Menu = new System.Windows.Forms.Panel();
-            this.titulo = new System.Windows.Forms.Label();
-            this.Instrucciones = new System.Windows.Forms.Label();
             this.Start = new System.Windows.Forms.Button();
+            this.Instrucciones = new System.Windows.Forms.Label();
+            this.titulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -461,10 +461,11 @@
             // 
             // Rockman
             // 
-            this.Rockman.BackColor = System.Drawing.Color.RoyalBlue;
-            this.Rockman.Location = new System.Drawing.Point(495, 559);
+            this.Rockman.BackColor = System.Drawing.Color.Transparent;
+            this.Rockman.Image = global::proyecto_final_OOP.Properties.Resources.rock_stand_up;
+            this.Rockman.Location = new System.Drawing.Point(512, 548);
             this.Rockman.Name = "Rockman";
-            this.Rockman.Size = new System.Drawing.Size(34, 50);
+            this.Rockman.Size = new System.Drawing.Size(28, 50);
             this.Rockman.TabIndex = 1;
             this.Rockman.TabStop = false;
             // 
@@ -1313,15 +1314,15 @@
             this.Menu.Size = new System.Drawing.Size(386, 385);
             this.Menu.TabIndex = 3;
             // 
-            // titulo
+            // Start
             // 
-            this.titulo.AutoSize = true;
-            this.titulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titulo.Location = new System.Drawing.Point(115, 46);
-            this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(171, 37);
-            this.titulo.TabIndex = 0;
-            this.titulo.Text = "Mega-man";
+            this.Start.Location = new System.Drawing.Point(146, 181);
+            this.Start.Name = "Start";
+            this.Start.Size = new System.Drawing.Size(103, 68);
+            this.Start.TabIndex = 2;
+            this.Start.Text = "Iniciar Juego";
+            this.Start.UseVisualStyleBackColor = true;
+            this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
             // Instrucciones
             // 
@@ -1333,15 +1334,15 @@
             this.Instrucciones.TabIndex = 1;
             this.Instrucciones.Text = "Usa las teclas W/A/S/D para moverte";
             // 
-            // Start
+            // titulo
             // 
-            this.Start.Location = new System.Drawing.Point(146, 181);
-            this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(103, 68);
-            this.Start.TabIndex = 2;
-            this.Start.Text = "Iniciar Juego";
-            this.Start.UseVisualStyleBackColor = true;
-            this.Start.Click += new System.EventHandler(this.Start_Click);
+            this.titulo.AutoSize = true;
+            this.titulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.Location = new System.Drawing.Point(115, 46);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(171, 37);
+            this.titulo.TabIndex = 0;
+            this.titulo.Text = "Mega-man";
             // 
             // Coin_Collector
             // 
@@ -1353,6 +1354,7 @@
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.pictureBox51);
             this.Controls.Add(this.pictureBox45);
+            this.Controls.Add(this.Rockman);
             this.Controls.Add(this.pictureBox39);
             this.Controls.Add(this.pictureBox50);
             this.Controls.Add(this.pictureBox44);
@@ -1434,7 +1436,6 @@
             this.Controls.Add(this.pictureBox28);
             this.Controls.Add(this.pictureBox21);
             this.Controls.Add(this.Moneda);
-            this.Controls.Add(this.Rockman);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);

@@ -18,7 +18,7 @@ namespace proyecto_final_OOP.Objeks
         private PictureBox lime = new PictureBox();
         private Timer Bullet_Time = new Timer();
 
-        public void Balistica(Form CC)
+        public void Balistica(Form CC) //genera los limones
         {
             lime.Image = Properties.Resources.Limon;
             lime.Size = new Size(15,15);
@@ -35,7 +35,7 @@ namespace proyecto_final_OOP.Objeks
             Bullet_Time.Start();
         }
 
-        private void Bullet_Time_EV(object sender, EventArgs e)
+        private void Bullet_Time_EV(object sender, EventArgs e) //es el timer que se encarga del movimiento de los limones, funciona cuando le da la gana xdxd
         {
             if (direccion == "Le")
             {

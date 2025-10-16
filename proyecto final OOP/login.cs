@@ -28,31 +28,31 @@ namespace proyecto_final_OOP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            username = textBox1.Text.Trim();
+            username = textBox1.Text.Trim(); //recoge lo que hayas escrito aqui
             //string password = tb_psw.Text.Trim();
-            if (username == "")
+            if (username == "") //se asegura de que no lo dejaras en blanco
             {
                 MessageBox.Show("Ingrese todos los datos");
             }
             usuarios usuario = usrepo.Login(username);
-            if (usuario.Nombre == username)
+            if (usuario.Nombre == username) //si el usuario esta registrado
             {
-                Init start = new Init();
+                Init start = new Init(); //regresas al inicio
                 this.Hide();
                 start.Show();
             }
             else
-            {
+            { //si no, pregunta si quieres registrarte
                 DialogResult vol = MessageBox.Show("¡no estas registrado!\n¿quieres registrarte?", "Error", MessageBoxButtons.YesNo);
                 if (vol == DialogResult.Yes)
                 {
-
+                    //si te quieres registrar, vas pá register 
                     register start = new register();
                     this.Hide();
                     start.Show();
                 }
                 else if (vol == DialogResult.No)
-                {
+                {//si no, vuelves al inicio
                     Init start = new Init();
                     this.Hide();
                     start.Show();

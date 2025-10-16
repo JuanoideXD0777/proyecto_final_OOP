@@ -116,6 +116,12 @@
     <Compile Include="ConfigP.Designer.cs">
       <DependentUpon>ConfigP.cs</DependentUpon>
     </Compile>
+    <Compile Include="final_level.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="final_level.Designer.cs">
+      <DependentUpon>final_level.cs</DependentUpon>
+    </Compile>
     <Compile Include="Init.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     <EmbeddedResource Include="ConfigP.resx">
       <DependentUpon>ConfigP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="final_level.resx">
+      <DependentUpon>final_level.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Init.resx">
       <DependentUpon>Init.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,7 +265,9 @@
   <ItemGroup>
     <None Include="Resources\GIF from GIFER.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\lvl7p.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Nintendo Switch - Mega Man Battle Network Legacy Collection - Gallery - Battle Chips %28BN1%29_r1_c3_processed_by_imagy.png" />
   </ItemGroup>
@@ -349,6 +360,168 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RockRK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl6p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl5p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl4p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl3p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl2p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl1p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_stand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_stand_l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_stand_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_stand_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_up_sprites_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_up_sprites_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_up_sprites_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_up_sprites_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_up_sprites_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_up_sprites_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_L_sprites_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_L_sprites_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_L_sprites_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_L_sprites_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_L_sprites_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_L_sprites_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_R_sprites_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_R_sprites_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_R_sprites_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_R_sprites_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_R_sprites_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_R_sprites_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_down_sprites_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_down_sprites_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_down_sprites_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_down_sprites_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_down_sprites_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_down_sprites_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_r.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fanta_asmatico.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_morido.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_limonero.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_limonero_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock_limonero_saltando_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CanodumbSP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CanodumbSPR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Megabuster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bassEXE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light armor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zero.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MM6_PlantBarrier.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

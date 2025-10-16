@@ -15,11 +15,11 @@ namespace proyecto_final_OOP
     public partial class MegaRun : Form, IG_Over, Ireturn
     {
         public static MegaRun instance;
-        bool salto = false;
-        int impulso = 12;
+        bool salto = false; //controla el comando cuando presionamos la barra
+        int impulso = 12; //impulso y fuerza determinan que tan alto vamos a saltar 
         int fuerza = 12;
         public int score = 0;
-        int nmySpd = 10;
+        int nmySpd = 10; //determina que tan rapido se mueven los enemigos
         Random RNG = new Random();
         bool disparo = false;
         int rakataka = 20;
@@ -54,6 +54,7 @@ namespace proyecto_final_OOP
             {
                 fuerza = 12;
                 Rock.Top = 299;
+                Rock.Image = Properties.Resources.rock_r;
                 impulso = 0;
             }
 
@@ -94,6 +95,7 @@ namespace proyecto_final_OOP
                     }
                     if (Rock.Bounds.IntersectsWith(x.Bounds))
                     {
+                        Rock.Image = Properties.Resources.rock_morido;
                         Tiempo.Stop();
                         G_Over = true;
                         Game_Over("Perdiste!");
@@ -110,6 +112,7 @@ namespace proyecto_final_OOP
                     }
                     if (Rock.Bounds.IntersectsWith(x.Bounds))
                     {
+                        Rock.Image = Properties.Resources.rock_morido;
                         Tiempo.Stop();
                         G_Over = true;
                         Game_Over("Perdiste!");
@@ -127,6 +130,7 @@ namespace proyecto_final_OOP
                 }
                 if (Rock.Bounds.IntersectsWith(pictureBox4.Bounds))
                 {
+                    Rock.Image = Properties.Resources.rock_morido;
                     Tiempo.Stop();
                     G_Over = true;
                     Game_Over("Perdiste!");
@@ -144,12 +148,14 @@ namespace proyecto_final_OOP
         {
             if (e.KeyCode == Keys.Enter && disparo == false)
             {
+                Rock.Image = Properties.Resources.rock_limonero;
                 disparo = true;
                 genLimones();
             }
             if (e.KeyCode == Keys.Space && salto == false)
             {
                 salto = true;
+                Rock.Image = Properties.Resources.rock_limonero_saltando_r;
             }
         }
 
@@ -158,6 +164,7 @@ namespace proyecto_final_OOP
             if (disparo == true)
             {
                 disparo = false;
+                Rock.Image = Properties.Resources.rock_r;
             }
             if (salto == true)
             {

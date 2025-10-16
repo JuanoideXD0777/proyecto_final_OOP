@@ -20,16 +20,16 @@ namespace proyecto_final_OOP
         int velF = 0; //esto controla su velocidad
         Random RNG;  //de momento solo controla la generacion de los BITS
         int vel;
-
+        //esto es para la generacion de balas
         PictureBox[] bala;
         int rakataka;
-
+        //esto es para la generacion de enemigos
         PictureBox[] Netnavi;
         int nmyVel;
-
+        //esto es para la generacion de los ataques de los enemigos
         PictureBox[] Slash;
         int slashSpeed;
-
+        //estos son controles del nivel, como curso, el score, la pausa y el game over
         int Course;
         public int score;
         bool pause;
@@ -38,11 +38,12 @@ namespace proyecto_final_OOP
         public Rockmaruga()
         {
             InitializeComponent();
-            instance = this;
+            instance = this; //este comando sirve para poder sincronizar el puntaje de este nivel con la base de datos
         }
 
         private void Rockmaruga_Load(object sender, EventArgs e)
         {
+            //estos son los parametros iniciales del juego
             pause = false;
             G_Over = false;
             Course = 0;
@@ -61,18 +62,18 @@ namespace proyecto_final_OOP
                 bit[i].SizeMode = PictureBoxSizeMode.StretchImage;
                 bit[i].BorderStyle = BorderStyle.None;
                 bit[i].Location = new Point(RNG.Next(-10, 500), RNG.Next(20, 800));
-                if (i % 2 == 1)
+                if (i % 2 == 1) //este comando crea bits pequeños
                 {
                     bit[i].Size = new Size(12,12);
                 }
-                else
+                else //este hace lo mismo pero con los grandes
                 {
                     bit[i].Size = new Size(25,25);
                 }
                 this.Controls.Add(bit[i]);
             }
             bala = new PictureBox[3];
-            for (int i = 0; i < bala.Length; i++)
+            for (int i = 0; i < bala.Length; i++) //este comando se encarga de generar constantemente las balas
             {
                 bala[i] = new PictureBox();
                 bala[i].Size = new Size(12, 12);
@@ -82,13 +83,13 @@ namespace proyecto_final_OOP
                 this.Controls.Add(bala[i]);
             }
 
-            Netnavi = new PictureBox[10];
-            Image NMY1 = Properties.Resources.nmy1RK;
+            Netnavi = new PictureBox[10]; // y esto se encarga de la generacion de enemigos
+            Image NMY1 = Properties.Resources.nmy1RK; //primero se cargan los sprites
             Image NMY2 = Properties.Resources.nmy2RK;
             Image NMY3 = Properties.Resources.nmy3RK;
             Image NMY4 = Properties.Resources.nmy4RK;
             Image Boss = Properties.Resources.BossRK;
-            for (int i = 0;i < Netnavi.Length;i++)
+            for (int i = 0;i < Netnavi.Length;i++) //despues se generan los enemigos
             {
                 Netnavi[i] = new PictureBox();
                 Netnavi[i].Size = new Size(50, 50);
@@ -98,19 +99,20 @@ namespace proyecto_final_OOP
                 this.Controls.Add(Netnavi[i]);
                 Netnavi[i].Location = new Point((i + 1) * 50, 20);
             }
-            Netnavi[0].Image = NMY2;
+            Netnavi[0].Image = NMY2; //al ultimo se les asigna su sprite a cada enemigo
             Netnavi[1].Image = Boss;
             Netnavi[2].Image = NMY4;
             Netnavi[3].Image = NMY3;
             Netnavi[4].Image = NMY1;
             /*
+            estos eran los sprites de prueba de los enemigos
             Netnavi[5].BackColor = Color.Green;
             Netnavi[6].BackColor = Color.Yellow;
             Netnavi[7].BackColor = Color.Green;
             Netnavi[8].BackColor = Color.Yellow;
             Netnavi[9].Image = Boss;
             */
-            Slash = new PictureBox[10];
+            Slash = new PictureBox[10]; //esto se encarga de la generacion de los ataques enemigos
             for (int i = 0; i < Slash.Length;i++)
             {
                 Slash[i] = new PictureBox();
@@ -126,7 +128,7 @@ namespace proyecto_final_OOP
 
         private void Cerrar(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //esto ya lo explique
         }
 
         private void Tiempo_Tick(object sender, EventArgs e)
@@ -150,8 +152,8 @@ namespace proyecto_final_OOP
             }
         }
 
-        //esta es una forma alternativa de generar el movimiento del personaje, aparentemente es un poco mas eficiente/sencilla que
-        //la utilizada en el nivel 0
+        //esta es una forma alternativa de generar el movimiento del personaje, es un poco mas sencilla que
+        //la utilizada en el nivel 0, pero a costa de tener un mayor delay
         private void Arriba_Tick(object sender, EventArgs e)
         {
             if (Rock.Top>20)
@@ -217,16 +219,16 @@ namespace proyecto_final_OOP
 
             if (e.KeyCode == Keys.Space)
             {
-                if(!G_Over)
+                if(!G_Over) //comprueba si el juego no ha acabado para poder utilizar el comando pausa
                 {
-                    if (pause)
+                    if (pause) //estos despausa el juego si esta pausado
                     {
                         Init();
                         label1.Visible = false;
                         salir.Visible = false;
                         pause = false;
                     }
-                    else
+                    else //si no estaba pausado, pos se pausa xdxxdxd
                     {
                         label1.Location = new Point(this.Width / 2 - 120, 150);
                         label1.Text = "Pausa";
@@ -240,7 +242,7 @@ namespace proyecto_final_OOP
         }
 
         //esto ya es de otra cosa :v
-        private void Bullet_time_Tick(object sender, EventArgs e)
+        private void Bullet_time_Tick(object sender, EventArgs e) //se encarga de que constantemente se generen balas
         {
             for (int i = 0; i < bala.Length; i++)
             {
@@ -260,7 +262,7 @@ namespace proyecto_final_OOP
 
         private void netnavi_time_Tick(object sender, EventArgs e)
         {
-            MovNMY(Netnavi, nmyVel);
+            MovNMY(Netnavi, nmyVel); //se encarga de mover a los enemigos
         }
         private void MovNMY(PictureBox[] arr, int SPD)
         {
@@ -275,7 +277,7 @@ namespace proyecto_final_OOP
                 }
             }
         }
-        private void Colision()
+        private void Colision() //se encarga de las colisiones del juego, el game over y la pantalla de stage clear
         {
             for (int i = 0; i < Netnavi.Length; i++)
             {
@@ -293,6 +295,7 @@ namespace proyecto_final_OOP
                         }
                         if (Course == 5)
                         {
+                            Parar_Todo();
                             win();
                         }
                     }
@@ -306,7 +309,7 @@ namespace proyecto_final_OOP
             }
         }
 
-        private void Game_Over(string str)
+        private void Game_Over(string str) //es el game over
         {
             label1.Text = str;
             label1.Location = new Point(120, 120);
@@ -315,14 +318,14 @@ namespace proyecto_final_OOP
             Parar_Todo();
         }
 
-        private void Parar_Todo()
+        private void Parar_Todo() //esto sirve tanto para pausa como para game over
         {
             Tiempo.Stop();
             Bullet_time.Stop();
             netnavi_time.Stop();
             netnavi_BulletTime.Stop();
         }
-        private void Init()
+        private void Init() //esto reinicia los timers del nivel
         {
             Tiempo.Start();
             netnavi_time.Start();
@@ -330,7 +333,7 @@ namespace proyecto_final_OOP
             netnavi_BulletTime.Start();
         }
 
-        private void netnavi_BulletTime_Tick(object sender, EventArgs e)
+        private void netnavi_BulletTime_Tick(object sender, EventArgs e) //se encarga de que los enemigos esten constantemente disparando
         {
             for (int i = 0; i < Slash.Length; i++)
             {
@@ -348,7 +351,7 @@ namespace proyecto_final_OOP
                 }
             }
         }
-        private void Balearon_A_Rock()
+        private void Balearon_A_Rock() //esta colision la puse aqui para no hacerme tantas bolas en las colisiones generales
         {
             for (int i = 0; i < Slash.Length; i++)
             {
@@ -361,7 +364,7 @@ namespace proyecto_final_OOP
             }
         }
 
-        private void Reintentar_Click(object sender, EventArgs e)
+        private void Reintentar_Click(object sender, EventArgs e) //¿hace falta explicar lo que hace este boton?
         {
             this.Controls.Clear();
             InitializeComponent();
@@ -373,7 +376,7 @@ namespace proyecto_final_OOP
             back();
         }
 
-        public void back()
+        public void back() //el comando back se encarga de regresar al selector de nivel
         {
             Parar_Todo();
             Nivel0 start = new Nivel0();
@@ -381,7 +384,7 @@ namespace proyecto_final_OOP
             start.Show();
         }
 
-        public void win()
+        public void win() //el comando win se encarga de mostrar la pantalla de stage clear
         {
             DialogResult vol = MessageBox.Show("¡Felicidades!\n¿Quieres pasar al siguente nivel?", "S:/T/A/G/E/ C.L.E.A.R.", MessageBoxButtons.YesNo);
             if (vol == DialogResult.Yes)

@@ -12,6 +12,8 @@ namespace proyecto_final_OOP.Objeks
 {
     internal class usrepo
     {
+        //el comando al insertarle un nombre lo buscara en la base de datos y si es correcto, lo usara como referencia
+        //para subir los puntajes a la base de datos
         public static usuarios Login(string username)
         {
             usuarios guest = new usuarios();
@@ -38,6 +40,7 @@ namespace proyecto_final_OOP.Objeks
             }
             return guest;
         }
+        //permite registrar nuevos usuarios a la base de datos
         public void register (string nombreUsr)
         {
             MySqlConnection conn = new MySqlConnection(webSetting.constr);

@@ -60,10 +60,12 @@ namespace proyecto_final_OOP
             if (Izq) //esto controla el movimiento
             {
                 Rock.Left -= vel;
+                Rock.Image = Properties.Resources.rock_L_sprites_01;
             }
             if (Der)
             {
                 Rock.Left += vel;
+                Rock.Image = Properties.Resources.rock_R_sprites_01;
             }
             Rock.Top += impulso;
             if (salto == true && fuerza < 0)
@@ -108,6 +110,8 @@ namespace proyecto_final_OOP
                 {
                     if (apuntando == "R")
                     {
+                        Rock.Image = Properties.Resources.rock_limonero;
+                        Rock.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
                         x.Left += rakataka;
                         if (x.Left > 1030)
                         {
@@ -116,6 +120,7 @@ namespace proyecto_final_OOP
                     }
                     if (apuntando == "L")
                     {
+                        Rock.Image = Properties.Resources.rock_limonero;
                         x.Left -= rakataka;
                         if (x.Left < -10)
                         {
@@ -173,11 +178,23 @@ namespace proyecto_final_OOP
                     {
                         if (Rock.Bounds.IntersectsWith(x.Bounds))
                         {
+                            if (apuntando == "l")
+                            {
+                                Rock.Image = Properties.Resources.rock_morido;
+                            }
+                            if (apuntando == "R")
+                            {
+                                Rock.Image = Properties.Resources.rock_morido;
+                                Rock.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                            }
                             GT.Stop();
                             Game_Over("Perdiste");
                         }
                     }
-                    
+                    if (Rock.Bounds.IntersectsWith(puerta.Bounds))
+                    {
+                        win();
+                    }
                 }
                 //enemigo1.Left -= nmyvel1;
                 //enemigo2.Left -= nmyvel2;
@@ -256,14 +273,17 @@ namespace proyecto_final_OOP
             if (e.KeyCode == Keys.D) //esto comprueba si la tecla esta siendo presionada
             {
                 Der = false;
+                Rock.Image = Properties.Resources.rock_stand_r;
             }
             if (e.KeyCode == Keys.A)
             {
                 Izq = false;
+                Rock.Image = Properties.Resources.rock_stand_l;
             }
             if (disparo == true)
             {
                 disparo = false;
+                Rock.Image = Properties.Resources.rock_stand;
             }
             if (salto == true)
             {
@@ -424,7 +444,20 @@ private void mov()
 
         public void win()
         {
-            throw new NotImplementedException();
+            DialogResult vol = MessageBox.Show("¡Felicidades!\n¿Quieres pasar al siguente nivel?", "S:/T/A/G/E/ C.L.E.A.R.", MessageBoxButtons.YesNo);
+            if (vol == DialogResult.Yes)
+            {
+
+                final_level start = new final_level();
+                this.Hide();
+                start.Show();
+            }
+            else if (vol == DialogResult.No)
+            {
+                Nivel0 start = new Nivel0();
+                this.Hide();
+                start.Show();
+            }
         }
     }
 }

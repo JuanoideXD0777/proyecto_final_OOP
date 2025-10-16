@@ -25,7 +25,7 @@ namespace proyecto_final_OOP
         }
 
         private void AñadirBD_Click(object sender, EventArgs e)
-        {
+        {//registra el usuario que escribas en el textbox y te registra automaticamente
             string nombre = textBox1.Text;
             string usrnm = textBox1.Text.Trim();
             login.instance.username = usrnm;

@@ -11,20 +11,20 @@ namespace proyecto_final_OOP.Objeks
     //a hueso digo er weso ya finalmente tenemos la primera clase, ahora solo nos faltan otras 7 xdxdxdxd
     internal class ghostnaviCC
     {
-        int spd = 6;
-        int Xpd = 3;
-        int Ypd = 3;
-        int maxH = 666;
+        int spd = 4; //la velocidad normal del fantasma es de 4
+        int Xpd = 2; //cuando estan persiguiendote, son mas lentos y usan estos valores :v
+        int Ypd = 2;
+        int maxH = 666; //esto determina los limites de donde pueden ir
         int maxW = 949;
         int minH = 58;
         int minW = 48;
         int cambio;
         Random RNG = new Random();
-        string[] Dir = { "L", "R", "UP", "DOWN" , "Buscar"};
-        string Ddir = "L";
-        public PictureBox imagen = new PictureBox();
+        string[] Dir = { "L", "R", "UP", "DOWN" , "Buscar"}; //maneja las direcciones que usaran los fantasmos
+        string Ddir = "L"; //esta es la direccion por default
+        public PictureBox imagen = new PictureBox(); //servira para mostrar los sprites en el formulario CC
 
-        public ghostnaviCC(Form Coin_Collector, Image img, int x, int y)
+        public ghostnaviCC(Form Coin_Collector, Image img, int x, int y) //utiliza la informacion dada para crear a los enemigos
         {
             imagen.Image = img;
             imagen.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -35,7 +35,7 @@ namespace proyecto_final_OOP.Objeks
             imagen.Top = y;
             Coin_Collector.Controls.Add(imagen);
         }
-        public void GhostnaviMov(PictureBox rocman)
+        public void GhostnaviMov(PictureBox rocman) //esto es una implementacion de ia para los enemigos
         {
             if (cambio > 0)
             {
@@ -98,7 +98,7 @@ namespace proyecto_final_OOP.Objeks
                 Ddir = "UP";
             }
         }
-        public void Cambiar_Dir()
+        public void Cambiar_Dir() //cambia la direccion de los enemigos
         {
             Ddir = Dir[RNG.Next(Dir.Length)];
         }

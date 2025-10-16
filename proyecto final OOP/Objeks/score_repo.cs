@@ -10,6 +10,7 @@ namespace proyecto_final_OOP.Objeks
 {
     internal class score_repo : IBDRep<puntajescomunes>
     {
+        //crea una lista de puntajes comunes y añade los campos de la base de datos
         private List<puntajescomunes> lista = new List<puntajescomunes>();
         public List<puntajescomunes> Obtener_D()
         {
@@ -59,6 +60,7 @@ namespace proyecto_final_OOP.Objeks
 
             return lista;
         }
+        //se encarga de registrar el puntaje local en la base de datos
         public void Regscore(int totalp, int rocmaruga, int CC, int megarun, string nombre)
         {
             MySqlConnection conn = new MySqlConnection(webSetting.constr);

@@ -22,18 +22,18 @@ namespace proyecto_final_OOP
         }
         private void ConfigP_Load(object sender, EventArgs e)
         {
-            if (clk == 0)
+            if (clk == 0) //si no has presionado el boton login
             {
                 label1.Text = "no estas registrado";
             }
             else
-            {
+            {//de otro modo
                 label1.Text = "registrado";
             }
         }
 
         private void login_Click(object sender, EventArgs e)
-        {
+        {//cuando presiones este boton, iras al formulario de login
             login log = new login();
             this.Hide();
             log.Show();
