@@ -291,7 +291,7 @@ namespace proyecto_final_OOP
                     if (score % 30 == 0)
                     {
                         Course += 1;
-                        lvl.Text = (Course < 10) ? "0" + Course.ToString(): Course.ToString();
+                        lvl.Text = (Course < 10) ? "0" + Course.ToString(): Course.ToString(); //el signo de interrogacion hace que el label acepte valores nulos y al mismo tiempo es una abreviacion de if/else, asi que convienrte en 0 valores nulos y deja pasar los valores no nulos
                         if (nmyVel <= 10 && slashSpeed<=10)
                         {
                             slashSpeed++;
